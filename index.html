@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandhita Saha – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    :root {
+  --bg: #fff;
+  --text: #333;
+  --primary: #ff4d6d;
+  --card-bg: #f9f9f9;
+}
+
+body.dark {
+  --bg: #111;
+  --text: #eee;
+  --card-bg: #1a1a1a;
+}
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      padding: 15px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    nav a {
+      color: var(--primary);
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px 40px;
+      background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+      color: white;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 10px;
+    }
+
+    .typing::after {
+      content: '|';
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    section {
+      padding: 60px 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    ul li {
+      margin-left: 20px;
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .projects a {
+      display: inline-block;
+      margin-top: 5px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 15px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      background: #fff;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <strong>Sandhita Saha</strong>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="C:\Users\sandh\OneDrive\Documents\Sandhita_Resume.pdf" download>Resume</a>
+      <button onclick="toggleDark()">🌙</button>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Hi, I'm Sandhita Saha</h1>
+    <p class="typing">Creative Web Developer & AI Enthusiast</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate web developer who loves to blend logic with design. From HTML to Python, I enjoy crafting projects that feel magical to users. Let's build cool stuff together!</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Python</li>
+      <li>Java</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>My personal portfolio with a responsive layout and animations.</p>
+      <a href="https://sandhita-15.github.io/Portfolio/">View Live</a>
+    </div>
+    <div class="card">
+      <h3>QR Generator</h3>
+      <p>A fun QR Code generator web tool.</p>
+      <a href="https://sandhita-15.github.io/QR/">View Live</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Email: <a href="mailto:sandhitasaha15@gmail.com">sandhitasaha15@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/sandhita-saha-58371b303/">linkedin.com/in/sandhita</a></p>
+    <p>GitHub: <a href="https://github.com/Sandhita-15">github.com/sandhita</a></p>
+  </section>
+
+  <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+
+  <footer>
+    &copy; 2025 Sandhita Saha | All rights reserved
+  </footer>
+
+  <script>
+    // Scroll Top Visibility
+    const scrollBtn = document.querySelector('.scroll-top');
+    window.addEventListener('scroll', () => {
+      scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+
+    // Dark Mode
+    function toggleDark() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+
+</body>
+</html>
